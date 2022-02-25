@@ -10,12 +10,12 @@ def random_predict(number:int=1) -> int:
         int: Число попыток
     """
     
-    count = 0
-    low = 0 
-    high = 100
+    count = 0 # счетчик попыток
+    low = 0 # начало интервала загадываемого числа
+    high = 100 # конец интервала загадываемого числа
     while True:
         count += 1
-        predict_number = (low + high)//2
+        predict_number = (low + high)//2 # предполагаемое число
         if predict_number == number:
             break
         elif predict_number > number:
